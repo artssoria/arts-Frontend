@@ -1,136 +1,32 @@
 <div class="row">
-    <h1>Hard & Soft skills</h1>
-    <div class="text-center col-sm-4 col-md-4 col-lg-4">
-        <circle-progress
-        [percent]="95" 
-        [radius]="100" 
-        [imageSrc]="'../../../assets/html-5.png'"
-        [showImage]="true"
-        [imageHeight]="70"
-        [imageWidth]="70"
-        [title]="'HTML'" 
-        [showUnits]="false" 
-        [titleColor]="'black'"
-        [titleFontSize]="'3em'" 
-        [showSubtitle]="false" 
-        [outerStrokeWidth]="8" 
-        [innerStrokeWidth]="2"
-        [outerStrokeColor]="'#78C000'" 
-        [innerStrokeColor]="'#C7E596'" 
-        [animation]="true" 
-        [animationDuration]="900"
-        [lazy]="true"
-        ></circle-progress>
+    <h1>Hard y Soft skills</h1>
+    <div class="col-lg-2">
+        <button type="button" class="btn btn-dark" routerLink="/nuevahardysoftskill" *ngIf="isLogged" ><i class="bi bi-plus-square"> Nuevos datos</i>
+            
+        </button>
     </div>
-    <div class="text-center col-sm-4 col-md-4 col-lg-4">
-        <circle-progress
-        [percent]="85" 
-        [radius]="100" 
-        [imageSrc]="'../../../assets/css-3.png'"
-        [showImage]="true"
-        [imageHeight]="70"
-        [imageWidth]="70"
-        [title]="'HTML'" 
-        [showUnits]="false" 
-        [titleColor]="'black'"
-        [titleFontSize]="'3em'" 
-        [showSubtitle]="false" 
-        [outerStrokeWidth]="8" 
-        [innerStrokeWidth]="2"
-        [outerStrokeColor]="'#78C000'" 
-        [innerStrokeColor]="'#C7E596'" 
-        [animation]="true" 
-        [animationDuration]="900"
-        [lazy]="true"
-        ></circle-progress>
+
+    <div class="col lg 1"></div>
+    <div class="col-lg-11">
+        <table class="table">
+            <tbody>
+                <tr *ngFor="let Hardskill of hardskill">
+                    <td>
+                        <h2>{{Hardskill.nombreE}}</h2>
+                    </td>
+                    <td>{{Hardskill.descripcionE}}</td>
+                    <td *ngIf="isLogged">
+                        <!-- <button class="btn btn-light" routerLink="/editexp/{{Hardskill.id}}">
+                            <i class="bi bi-pencil-fill">
+                              </i> </button> -->
+                    </td>
+                    <td *ngIf="isLogged">
+                        <button class="btn btn-danger" (click)="delete(Hardskill.id)">
+                            <i class="bi bi-trash-fill"></i> </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </div>
-    <div class="text-center col-sm-4 col-md-4 col-lg-4">
-        <circle-progress
-        [percent]="75" 
-        [radius]="100" 
-        [imageSrc]="'../../../assets/js.png'"
-        [showImage]="true"
-        [imageHeight]="70"
-        [imageWidth]="70"
-        [title]="'HTML'" 
-        [showUnits]="false" 
-        [titleColor]="'black'"
-        [titleFontSize]="'3em'" 
-        [showSubtitle]="false" 
-        [outerStrokeWidth]="8" 
-        [innerStrokeWidth]="2"
-        [outerStrokeColor]="'#78C000'" 
-        [innerStrokeColor]="'#C7E596'" 
-        [animation]="true" 
-        [animationDuration]="900"
-        [lazy]="true"
-        ></circle-progress>
-    </div>
-    <div class="text-center col-sm-4 col-md-4 col-lg-4">
-        <circle-progress
-        [percent]="75" 
-        [radius]="100" 
-        [imageSrc]="'../../../assets/github.png'"
-        [showImage]="true"
-        [imageHeight]="70"
-        [imageWidth]="70"
-        [title]="'HTML'" 
-        [showUnits]="false" 
-        [titleColor]="'black'"
-        [titleFontSize]="'3em'" 
-        [showSubtitle]="false" 
-        [outerStrokeWidth]="8" 
-        [innerStrokeWidth]="2"
-        [outerStrokeColor]="'#78C000'" 
-        [innerStrokeColor]="'#C7E596'" 
-        [animation]="true" 
-        [animationDuration]="900"
-        [lazy]="true"
-        ></circle-progress>
-    </div>
-    <div class="text-center col-sm-4 col-md-4 col-lg-4">
-        <circle-progress
-        [percent]="85" 
-        [radius]="100" 
-        [imageSrc]="'../../../assets/linguistics.png'"
-        [showImage]="true"
-        [imageHeight]="70"
-        [imageWidth]="70"
-        [title]="'HTML'" 
-        [showUnits]="false" 
-        [titleColor]="'black'"
-        [titleFontSize]="'3em'" 
-        [showSubtitle]="false" 
-        [outerStrokeWidth]="8" 
-        [innerStrokeWidth]="2"
-        [outerStrokeColor]="'#78C000'" 
-        [innerStrokeColor]="'#C7E596'" 
-        [animation]="true" 
-        [animationDuration]="900"
-        [lazy]="true"
-        ></circle-progress>
-    </div>
-    <div class="text-center col-sm-4 col-md-4 col-lg-4">
-        <circle-progress
-        [percent]="100" 
-        [radius]="100" 
-        [imageSrc]="'../../../assets/group.png'"
-        [showImage]="true"
-        [imageHeight]="70"
-        [imageWidth]="70"
-        [title]="'HTML'" 
-        [showUnits]="false" 
-        [titleColor]="'black'"
-        [titleFontSize]="'3em'" 
-        [showSubtitle]="false" 
-        [outerStrokeWidth]="8" 
-        [innerStrokeWidth]="2"
-        [outerStrokeColor]="'#78C000'" 
-        [innerStrokeColor]="'#C7E596'" 
-        [animation]="true" 
-        [animationDuration]="900"
-        [lazy]="true"
-        ></circle-progress>
-    </div>
-    
+
 </div>
