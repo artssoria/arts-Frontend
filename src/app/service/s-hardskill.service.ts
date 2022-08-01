@@ -7,7 +7,7 @@ import { Hardskill } from '../model/hardskill';
   providedIn: 'root'
 })
 export class SHardskillService {
-  expURL = 'http://localhost:8080/hardskill/';
+  expURL = 'https://backendsoria.herokuapp.com/hardskill';
 
   constructor(private httpClient: HttpClient) { }
 
