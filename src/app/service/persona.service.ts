@@ -11,6 +11,6 @@ export class PersonaService {
   URL = 'https://backendsoria.herokuapp.com/personas/';
   constructor(private http: HttpClient) { }
   public getpersona(): Observable<persona>{
-    return this.http.get<persona>(this.URL + 'traer/perfil');
+    return this.http.get<persona>(this.URL + 'traer/');
   }
 }
